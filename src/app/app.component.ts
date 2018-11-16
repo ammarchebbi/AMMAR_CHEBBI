@@ -9,8 +9,10 @@ import { Article } from './models/article';
 export class AppComponent implements OnInit {
 
   title = 'app';
+  nbre : number;
   listArticle: Article[]
   ngOnInit() {
+    this.nbre=0;
     this.listArticle = [
       { titre: "Le champion du monde", auteur: "Med Taher", contenu: "le champion du mode", date: "12/12/2005" },
       { titre: "Le champion du monde", auteur: "Med Taher", contenu: "le champion du mode", date: "12/12/2005" },

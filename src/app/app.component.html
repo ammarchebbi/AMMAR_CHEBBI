@@ -1,3 +1,4 @@
 Les articles du jour
-veuillez saisir le nombre de d'articles à afficher dans la page <input type="number" />
+veuillez saisir le nombre de d'articles à afficher dans la page <input type="number" [(ngModel)]="nbre" (keyup)="0" />
+<app-page [nbArticle]="nbre" [listeArticles]="listArticle"></app-page>
 <app-annonces></app-annonces>

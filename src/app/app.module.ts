@@ -8,6 +8,7 @@ import { AnnoncesComponent } from './Components/annonces/annonces.component';
 import { ListAnnoncesComponent } from './Components/list-annonces/list-annonces.component';
 import { EstimationCoutComponent } from './Components/estimation-cout/estimation-cout.component';
 import { routing } from './app.routing';
+import { PageComponent } from './Components/page/page.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { routing } from './app.routing';
     AppComponent,
     AnnoncesComponent,
     ListAnnoncesComponent,
-    EstimationCoutComponent
+    EstimationCoutComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule, FormsModule,HttpModule,routing
