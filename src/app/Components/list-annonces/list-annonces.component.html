@@ -1,0 +1,7 @@
+<div *ngFor="let annonce of listAnnonces">
+  <div *ngIf="annonce.etat != 'annulé'" [ngStyle]="{'background-color':annonce.etat=='confirmé'?'green':'orange'}" >
+    {{annonce.titre}} <br>
+    {{annonce.description}} <br>
+    *********************************************
+  </div>
+</div>
