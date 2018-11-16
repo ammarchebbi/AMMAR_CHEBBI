@@ -1,3 +1,36 @@
-<p>
-  estimation-cout works!
-</p>
+<form #coutForm="ngForm" (ngSubmit)="calculer()" >
+  <table>
+    <tr>
+      <td>Position souhaitée</td>
+      <td>
+        <select required [(ngModel)]="position.name"
+         name="position" #position="ngModel" required>
+          <option *ngFor="let opt of options" [value]="opt.name">{{opt.name}}</option>
+        </select>
+        <!-- <select name="name" [(ngModel)]="position" #position="ngModel" required>
+          <option *ngFor="let opt of options" [value]="opt" >{{opt}}</option>
+        </select> -->
+
+        <div class="alert alert-danger" [hidden]="position.valid">
+          La position est obligatoire
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td>Nombre de caractéres</td>
+      <td>
+        <input type="number" name="name" [(ngModel)]="nbre" #nbCatacteres="ngModel" required />
+
+        <div class="alert alert-danger" [hidden]="nbre.valid">
+          le nombre de caractére est obligatoire
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button type="submit">Estimer</button></td>
+    </tr>
+  </table>
+</form>
+le cout de votre article est à {{cout}} dt
